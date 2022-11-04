@@ -16,15 +16,15 @@
 #define USE_LED 0
 
 // Interrupt pin number
-#define INTERRUPT_PIN 25
+#define INTERRUPT_PIN 29        //using the MOSI pin on the Herald board for the PIR Output
 
 // How many milliseconds between switching advertisements
 #define ADV_SWITCH_MS 1000
 
-#define DEVICE_NAME "squall+PIR"
+#define DEVICE_NAME "herald+PIR"
 
 // Manufacturer specific data setup
-#define UMICH_COMPANY_IDENTIFIER 0x02E0
+#define UMICH_COMPANY_IDENTIFIER 0xA154             //changed to better filter the PIR Herald
 #define PIR_MOTION_SERVICE 0x13
 
 // https://rawgit.com/lab11/blees/master/summon/squall-pir/index.html
