@@ -16,7 +16,7 @@
 #define USE_LED 0
 
 // Interrupt pin number
-#define INTERRUPT_PIN 29        //using the MOSI pin on the Herald board for the PIR Output
+#define INTERRUPT_PIN 28        //using the MISO pin on the Herald board for the PIR Output - 28/
 
 // How many milliseconds between switching advertisements
 #define ADV_SWITCH_MS 1000
@@ -24,7 +24,7 @@
 #define DEVICE_NAME "herald+PIR"
 
 // Manufacturer specific data setup
-#define UMICH_COMPANY_IDENTIFIER 0xA154             //changed to better filter the PIR Herald
+#define UMICH_COMPANY_IDENTIFIER 0xA154 //0x02E0        //changed to better filter the PIR Herald
 #define PIR_MOTION_SERVICE 0x13
 
 // https://rawgit.com/lab11/blees/master/summon/squall-pir/index.html
@@ -141,7 +141,7 @@ int main(void) {
     // Setup BLE
     simple_ble_init(&ble_config);
 
-    // Need to init multi adv
+    // Need to init multi advinterrupt
     multi_adv_init(ADV_SWITCH_MS);
 
     // Now register our advertisement configure functions

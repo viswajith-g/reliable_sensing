@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "eddystone.h": "c",
+        "app_gpiote.h": "c",
+        "simple_adv.h": "c",
+        "simple_ble.h": "c",
+        "multi_adv.h": "c"
+    }
+}
